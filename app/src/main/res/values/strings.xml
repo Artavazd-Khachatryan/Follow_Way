@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">FollowWay</string>
+    <string name="select_person">Select Person</string>
+    <string name="parent">Parent</string>
+    <string name="done">Done</string>
+    <string name="the_places_where_was_been">The Places where was been</string>
+    <string name="google">Google</string>
+    <string name="create_group">Create Group</string>
+    <string name="send_invitation_title_text">To see your kid on the map install the, FollowWay,, app on the kids phone</string>
+    <string name="send_invitation">Send Invitation</string>
+    <string name="please_check_the_kids_name_and_more_text">Please check the kids name and more text</string>
+    <string name="select_user_name">Select User Name</string>
+    <string name="female">Female</string>
+    <string name="select_sex">Select sex</string>
+    <string name="male">Male</string>
+    <string name="child_phone_successfully_connected_now_you_can_see_on_map">Child phone successfully connected. \nNow you can see on map.</string>
+    <string name="login_uppercase">LOGIN</string>
+    <string name="set_password">Set password</string>
+    <string name="you_have_invitation_on_this_app_please_generate_the_code">You have invitation on this app\nplease generate the code</string>
+    <string name="generate_code">Generate Code</string>
+
+    <string name="start_info_page_1">See the exact location of you child  and the history of movements:</string>
+    <string name="start_info_page_2">Get notification on your phone</string>
+
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewHolder"
+            type="com.useruser.followay.domain.addapters.InvatedUserViewHolder" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCircle"
+        android:orientation="vertical"
+        bind:cardCornerRadius="23dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="@{viewHolder::itemClick}">
+
+        <FrameLayout
+            android:id="@+id/colorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:civ_border_width="1dp"
+                bind:civ_border_color="@color/app_bg"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

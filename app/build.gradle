@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.useruser.followay"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = "1.8"
+        targetCompatibility = "1.8"
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //RecyclerView
+    def recyclerview_version = "1.0.0"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    //dagger
+    ext.dagger2_version = '2.22'
+    implementation 'com.google.dagger:dagger-android-support:2.22'
+    kapt 'com.google.dagger:dagger-android-processor:2.22'
+    // Basic Dagger 2 (required)
+    kapt "com.google.dagger:dagger-compiler:$dagger2_version"
+
+    //map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    //WorkManager
+    def work_version = "1.0.1"
+    implementation "android.arch.work:work-runtime:$work_version"
+    // Kotlin + coroutines
+    implementation "android.arch.work:work-runtime-ktx:$work_version"
+    // optional - RxJava2 support
+    implementation "android.arch.work:work-rxjava2:$work_version"
+    // optional - Test helpers
+    androidTestImplementation "android.arch.work:work-testing:$work_version"
+
+    //location
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    //google autorization
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    ////facebook autorization
+    implementation 'com.facebook.android:facebook-login:5.0.1'
+
+    //circleimageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //coil (image loader)
+    implementation("io.coil-kt:coil:0.8.0")
+
+    //RxKotlin
+    implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
+
+    //ScrollingPagerIndicator
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.6"
+
+    //ViewPager
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-rc01'
+
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_google">#DC4B3E</color>
+    <color name="color_facebook">#4267B2</color>
+    <color name="app_bg">#030333</color>
+    <color name="color_map_marker_text">#4E215D</color>
+</resources>
